@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Finance Manager</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <h1>Assistente Financeiro</h1>
+
+    <h2>Adicionar Transação</h2>
+
+    <input type="text" id="descricao" placeholder="Descrição">
+    <input type="number" id="valor" placeholder="Valor">
+
+    <select id="tipo">
+        <option value="RECEITA">Entrada</option>
+        <option value="DESPESA">Saída</option>
+    </select>
+
+    <button id="btnAdicionar">Adicionar</button>
+
+    <h2 class="saldo-texto">
+        Saldo: R$
+        <span id="saldo"></span>
+    </h2>
+
+    <div class="grafico-container">
+        <canvas id="grafico"></canvas>
+    </div>
+
+    <h2>Transações</h2>
+    <ul id="lista"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

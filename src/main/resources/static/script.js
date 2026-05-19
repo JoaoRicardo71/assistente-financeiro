@@ -7,7 +7,7 @@ let usuario = localStorage.getItem("usuario");
 
 // protege páginas privadas
 if (
-    !window.location.pathname.includes("login.html")
+    window.location.pathname.includes("app.html")
     &&
     !usuario
 ) {
@@ -266,7 +266,7 @@ async function login() {
 
         alert("Login realizado!");
 
-        window.location.href = "/";
+        window.location.href = "/app.html";
 
     } catch (erro) {
 
