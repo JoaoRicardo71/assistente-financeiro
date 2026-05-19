@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/transacoes";
+const API = "/transacoes";
 
 // ==========================
 // USUÁRIO
@@ -238,7 +238,7 @@ async function login() {
             document.getElementById("senha").value;
 
         const res = await fetch(
-            "http://localhost:8080/usuarios/login",
+            "/usuarios/login",
             {
                 method: "POST",
 
@@ -295,7 +295,7 @@ async function cadastrar() {
             ).value;
 
         const res = await fetch(
-            "http://localhost:8080/usuarios/registrar",
+            "/usuarios/registrar",
             {
                 method: "POST",
 
