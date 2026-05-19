@@ -21,6 +21,6 @@ public class UsuarioController {
 
     @PostMapping("/login")
     public Usuario login(@RequestBody Usuario usuario) {
-        return service.login(usuario.getEmail(), usuario.getSenha());
+        return service.login(usuario.getUsername(), usuario.getSenha());
     }
 }

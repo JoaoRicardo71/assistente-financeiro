@@ -17,16 +17,26 @@ public class UsuarioService {
     }
 
     public Usuario registrar(Usuario usuario) {
+
+        if (repository.findByUsername(usuario.getUsername()).isPresent()) {
+            throw new RuntimeException("Usuário já existe");
+        }
+
         return repository.save(usuario);
     }
 
-    public Usuario login(String email, String senha) {
-        Optional<Usuario> user = repository.findByEmail(email);
+    public Usuario login(String username, String senha) {
 
-        if (user.isPresent() && user.get().getSenha().equals(senha)) {
+        Optional<Usuario> user =
+                repository.findByUsername(username);
+
+        if (user.isPresent()
+                && user.get().getSenha().equals(senha)) {
+
             return user.get();
         }
 
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Email ou senha inválidos");
+        throw new RuntimeException("Usuário ou senha inválidos");
     }
+
 }

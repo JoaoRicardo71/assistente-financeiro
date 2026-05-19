@@ -16,31 +16,29 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public String getEmail() {
-        return email;
-    }
+    private String username;
+
+    private String senha;
+
+    public Usuario() {}
 
     public Long getId() {
         return id;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     public String getSenha() {
         return senha;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    private String email;
-    private String senha;
-
 }

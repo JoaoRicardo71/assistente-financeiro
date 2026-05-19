@@ -7,14 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-<h2>Login</h2>
-
-<input type="text" id="email" placeholder="Email">
-<input type="password" id="senha" placeholder="Senha">
-
-<button id="btnLogin">Entrar</button>
-
 <div class="container">
 
     <h1>Assistente Financeiro</h1>
@@ -31,7 +23,10 @@
 
     <button id="btnAdicionar">Adicionar</button>
 
-    <h2>Saldo: R$ <span id="saldo">0</span></h2>
+    <h2 class="saldo-texto">
+        Saldo: R$
+        <span id="saldo"></span>
+    </h2>
 
     <div class="grafico-container">
         <canvas id="grafico"></canvas>
